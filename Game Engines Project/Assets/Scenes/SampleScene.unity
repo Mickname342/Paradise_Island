@@ -2578,7 +2578,7 @@ GameObject:
   - component: {fileID: 742485220}
   - component: {fileID: 742485219}
   - component: {fileID: 742485223}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Island
   m_TagString: Island
   m_Icon: {fileID: 0}
@@ -3364,7 +3364,7 @@ Transform:
   m_GameObject: {fileID: 907907479}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -74.09369, y: 0, z: -18.09}
+  m_LocalPosition: {x: -234.3, y: 0, z: 73.6}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3659,9 +3659,8 @@ GameObject:
   - component: {fileID: 973061262}
   - component: {fileID: 973061265}
   - component: {fileID: 973061264}
-  - component: {fileID: 973061268}
-  - component: {fileID: 973061270}
-  - component: {fileID: 973061269}
+  - component: {fileID: 973061266}
+  - component: {fileID: 973061267}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -3705,8 +3704,8 @@ MonoBehaviour:
   mass: 1
   damping: 0.01
   banking: 0.1
-  maxSpeed: 10
-  maxForce: 10
+  maxSpeed: 19
+  maxForce: 12
 --- !u!114 &973061265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3725,7 +3724,7 @@ MonoBehaviour:
   - {fileID: 60669761}
   bondDamping: 10
   angularBondDamping: 6
---- !u!114 &973061268
+--- !u!114 &973061266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3734,30 +3733,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 973061261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5af7711663488ea4ba619864f70eb4e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wander: {fileID: 973061270}
-  seek: {fileID: 973061269}
-  random: 0
---- !u!114 &973061269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973061261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e7d5bdc825d0b74d8f1a02b866b9220, type: 3}
+  m_Script: {fileID: 11500000, guid: a0d852128b62ffd4fb165d273bda0f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 1
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
-  targetGameObject: {fileID: 96962217}
-  target: {x: 0, y: 0, z: 0}
---- !u!114 &973061270
+  target: {fileID: 2032452382}
+--- !u!114 &973061267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3766,18 +3749,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 973061261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1d4d40c2a7e58c448dad63a5837a97a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9026b3a33b5c37948ba9c59db9343e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
+  weight: 17
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
-  frequency: 0.3
-  radius: 10
-  theta: 0
-  amplitude: 80
-  distance: 5
-  axis: 0
+  scale: 4
+  forwardFeelerDepth: 30
+  sideFeelerDepth: 15
+  frontFeelerUpdatesPerSecond: 10
+  sideFeelerUpdatesPerSecond: 5
+  feelerRadius: 7
+  forceType: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 384
 --- !u!1 &999160789
 GameObject:
   m_ObjectHideFlags: 0
@@ -5468,8 +5455,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1734375591}
-  - component: {fileID: 1734375590}
-  - component: {fileID: 1734375589}
   m_Layer: 0
   m_Name: Whale (1)
   m_TagString: Untagged
@@ -5477,51 +5462,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1734375589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734375588}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9026b3a33b5c37948ba9c59db9343e30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 1
-  force: {x: 0, y: 0, z: 0}
-  boid: {fileID: 0}
-  scale: 4
-  forwardFeelerDepth: 30
-  sideFeelerDepth: 15
-  frontFeelerUpdatesPerSecond: 10
-  sideFeelerUpdatesPerSecond: 5
-  feelerRadius: 2
-  forceType: 0
-  mask:
-    serializedVersion: 2
-    m_Bits: 54
---- !u!114 &1734375590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734375588}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6b80713328338147a53b3fa8366354d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
-  velocity: {x: 0, y: 0, z: 0}
-  mass: 1
-  damping: 0.01
-  banking: 0.1
-  maxSpeed: 5
-  maxForce: 10
 --- !u!4 &1734375591
 Transform:
   m_ObjectHideFlags: 0
@@ -5531,7 +5471,7 @@ Transform:
   m_GameObject: {fileID: 1734375588}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -163.7, y: 0, z: 17.4}
+  m_LocalPosition: {x: -198.1, y: 0, z: 79.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6752,7 +6692,7 @@ MonoBehaviour:
   damping: 0.01
   banking: 0.1
   maxSpeed: 20
-  maxForce: 10
+  maxForce: 12
 --- !u!114 &2032452384
 MonoBehaviour:
   m_ObjectHideFlags: 0
