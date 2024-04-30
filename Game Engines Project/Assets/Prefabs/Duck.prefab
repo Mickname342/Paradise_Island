@@ -266,7 +266,7 @@ MonoBehaviour:
   frontFeelerUpdatesPerSecond: 1
   sideFeelerUpdatesPerSecond: 1
   feelerRadius: 1
-  forceType: 2
+  forceType: 3
   mask:
     serializedVersion: 2
     m_Bits: 64

@@ -8,11 +8,16 @@ public class DuckStay : DuckBaseState
     {
         state.wander.weight = 0;
         state.seek.weight = 0;
+        state.seek.targetGameObject = null;
         state.boid.velocity = new Vector3(0, 0, 0);
     }
 
     public override void UpdateState(DuckStateManager state)
     {
+        state.wander.weight = 0;
+        state.seek.weight = 0;
+        state.seek.targetGameObject = null;
+        state.boid.velocity = new Vector3(0, 0, 0);
         if (state.random == 1)
         {
             state.SwitchState(state.wanderLand);
