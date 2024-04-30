@@ -6,7 +6,7 @@ public class DuckStay : DuckBaseState
 {
     public override void EnterState(DuckStateManager state)
     {
-        state.noiseWander.weight = 0;
+        state.wander.weight = 0;
         state.seek.weight = 0;
         state.boid.velocity = new Vector3(0, 0, 0);
     }

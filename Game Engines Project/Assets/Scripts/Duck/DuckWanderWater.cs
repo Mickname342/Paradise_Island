@@ -6,7 +6,7 @@ public class DuckWanderWater : DuckBaseState
 {
     public override void EnterState(DuckStateManager state)
     {
-        state.noiseWander.weight = 4;
+        state.wander.weight = 7f;
         state.seek.weight = 1;
     }
 
@@ -15,6 +15,14 @@ public class DuckWanderWater : DuckBaseState
         if (state.waterRandom == 2)
         {
             state.SwitchState(state.goToLand);
+        }
+        if (state.wanderRandom < 6)
+        {
+            state.seek.weight = 1;
+        }
+        else if (state.wanderRandom >= 6)
+        {
+            state.seek.weight = 4;
         }
     }
 

@@ -12,7 +12,7 @@ public class DuckStateManager : MonoBehaviour
     public DuckGoToLand goToLand = new DuckGoToLand();
     public DuckWanderLand wanderLand = new DuckWanderLand();
 
-    public NoiseWander noiseWander;
+    public JitterWander wander;
     public Seek seek;
     public Boid boid;
 
@@ -21,16 +21,18 @@ public class DuckStateManager : MonoBehaviour
 
     public int random;
     public int waterRandom;
+    public int wanderRandom;
     void Start()
     {
         StartCoroutine(RandomGenerator());
+        StartCoroutine(NoiseRandomiser());
         currentState = stay;
 
         currentState.EnterState(this);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         currentState.UpdateState(this);
     }
@@ -48,6 +50,15 @@ public class DuckStateManager : MonoBehaviour
             yield return new WaitForSeconds(10);
             random = Random.Range(0, 3);
             waterRandom = Random.Range(0, 3);
+        }
+    }
+
+    IEnumerator NoiseRandomiser()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1.5f);
+            wanderRandom = Random.Range(0, 10);
         }
     }
 

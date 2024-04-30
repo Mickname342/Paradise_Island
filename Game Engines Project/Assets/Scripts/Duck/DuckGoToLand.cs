@@ -7,7 +7,7 @@ public class DuckGoToLand : DuckBaseState
     public override void EnterState(DuckStateManager state)
     {
         state.seek.weight = 4;
-        state.noiseWander.weight = 1;
+        state.wander.weight = 0;
         state.seek.targetGameObject = state.centre;
     }
 

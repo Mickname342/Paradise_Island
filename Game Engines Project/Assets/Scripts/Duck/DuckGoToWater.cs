@@ -12,7 +12,6 @@ public class DuckGoToWater : DuckBaseState
         for (int i = 0; i < state.borders.Length; i++)
         {
             distance = Vector3.Distance(state.transform.position, state.borders[i].transform.position);
-            Debug.Log("this is the distance " + i + ": " + distance);
 
             if (distance < prevDistance)
             {
@@ -20,7 +19,7 @@ public class DuckGoToWater : DuckBaseState
                 number = i;
             }
         }
-        state.noiseWander.weight = 0;
+        state.wander.weight = 0;
         state.seek.weight = 1;
         state.seek.targetGameObject = state.borders[number];
     }
