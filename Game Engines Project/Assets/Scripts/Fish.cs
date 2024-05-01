@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Fish : MonoBehaviour
 {
-    public Transform head;
     public Transform tail;
     [Range(0.0f, 5.0f)]
     public float frequency = 0.5f;
@@ -22,8 +21,6 @@ public class Fish : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
-        head.localRotation = Quaternion.AngleAxis(Mathf.Sin(Time.time * frequency + theta) * headAmplitude, Vector3.up);
         tail.localRotation = Quaternion.AngleAxis(Mathf.Sin(Time.time * frequency + theta) * tailAmplitude, Vector3.up);
 
     }
