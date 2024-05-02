@@ -41,7 +41,6 @@ public class DuckStateManager : MonoBehaviour
     {
         currentState = state;
         state.EnterState(this);
-        print(gameObject.transform.parent.gameObject.name + ": " + currentState.ToString());
     }
 
     IEnumerator RandomGenerator()

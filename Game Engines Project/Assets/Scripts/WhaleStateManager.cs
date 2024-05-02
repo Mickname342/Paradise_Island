@@ -10,7 +10,7 @@ public class WhaleStateManager : MonoBehaviour
     public WhaleWanderState wanderState = new WhaleWanderState();
 
     public NoiseWander wander;
-    public Seek seek;
+    public FollowPath pathFollow;
 
     public int random = 0;
 

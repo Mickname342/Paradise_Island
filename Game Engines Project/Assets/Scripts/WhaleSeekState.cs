@@ -7,7 +7,7 @@ public class WhaleSeekState : WhaleBaseState
     public override void EnterState(WhaleStateManager state)
     {
         state.wander.weight = 0;
-        state.seek.weight = 1;
+        state.pathFollow.weight = 1;
     }
 
     public override void UpdateState(WhaleStateManager state)

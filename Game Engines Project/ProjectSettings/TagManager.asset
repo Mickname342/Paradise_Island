@@ -7,6 +7,7 @@ TagManager:
   - Positions
   - Island
   - Centre
+  - Anemonae
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Duck
   - Island
   - Whale
-  - 
+  - Ground
   - 
   - 
   - 
