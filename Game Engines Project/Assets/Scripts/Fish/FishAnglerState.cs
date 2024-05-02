@@ -17,7 +17,10 @@ public class FishAnglerState : FishBaseState
 
     public override void OnTriggerEnter(FishStateManager state, Collider other)
     {
-        
+        if (other.CompareTag("Angler"))
+        {
+            state.Destroy();
+        }
     }
 
     public override void OnTriggerExit(FishStateManager state, Collider other)

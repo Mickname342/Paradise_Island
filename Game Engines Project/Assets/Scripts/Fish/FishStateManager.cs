@@ -50,4 +50,9 @@ public class FishStateManager : MonoBehaviour
         currentState = state;
         state.EnterState(this);
     }
+
+    public void Destroy()
+    {
+        Destroy(gameObject.transform.parent.gameObject);
+    }
 }
