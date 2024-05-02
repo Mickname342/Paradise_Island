@@ -7,8 +7,11 @@ public class FishStateManager : MonoBehaviour
     FishBaseState currentState;
 
     public FishSeekState seekState = new FishSeekState();
+    public FishAnglerState anglerState = new FishAnglerState();
 
     public Seek seek;
+
+    public GameObject angler;
     void Start()
     {
         currentState = seekState;
@@ -35,5 +38,16 @@ public class FishStateManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         currentState.SeekAgain(this);
+    }
+
+    public void Angler()
+    {
+        currentState.Angler(this);
+    }
+
+    public void SwitchState(FishBaseState state)
+    {
+        currentState = state;
+        state.EnterState(this);
     }
 }

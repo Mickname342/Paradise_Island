@@ -13,4 +13,6 @@ public abstract class FishBaseState
     public abstract void OnTriggerExit(FishStateManager state, Collider other);
 
     public abstract void SeekAgain(FishStateManager state);
+
+    public abstract void Angler(FishStateManager state);
 }
