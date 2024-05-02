@@ -16,7 +16,12 @@ public class CameraLookAt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(targets[0].transform);
-        transform.position = boids[0].transform.position;
+        transform.LookAt(targets[targetNumber].transform);
+        transform.position = boids[targetNumber].transform.position;
+    }
+
+    public void ChangeCamera(int val)
+    {
+        targetNumber = val;
     }
 }
