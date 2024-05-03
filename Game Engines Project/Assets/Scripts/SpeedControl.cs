@@ -22,11 +22,24 @@ public class SpeedControl : MonoBehaviour
     public Boid[] fish;
     public Boid anglerFish1;
     public Boid anglerFish2;
+
+    float duckInitialSpeed;
+    float whaleInitialSpeed;
+    float babyInitialSpeed;
+    float fishInitialSpeed;
+    float angler1InitialSpeed;
+    float angler2InitialSpeed;
     // Start is called before the first frame update
     void Start()
     {
         slider.value = ducks[0].maxSpeed;
         individualSpeed.text = ducks[0].maxSpeed.ToString();
+        duckInitialSpeed = ducks[0].maxSpeed;
+        whaleInitialSpeed = whale.maxSpeed;
+        babyInitialSpeed = babyWhale.maxSpeed;
+        fishInitialSpeed = fish[0].maxSpeed;
+        angler1InitialSpeed = anglerFish1.maxSpeed;
+        angler2InitialSpeed = anglerFish2.maxSpeed;
     }
 
     // Update is called once per frame
@@ -119,6 +132,49 @@ public class SpeedControl : MonoBehaviour
                 break;
             case 5:
                 anglerFish2.maxSpeed = speed;
+                break;
+        }
+    }
+
+    public void ResetBoidSpeed()
+    {
+        switch (boidSelect)
+        {
+            case 0:
+                for (int i = 0; i < ducks.Length; i++)
+                {
+                    ducks[i].maxSpeed = duckInitialSpeed;
+                }
+                slider.value = ducks[0].maxSpeed;
+                individualSpeed.text = ducks[0].maxSpeed.ToString();
+                break;
+            case 1:
+                whale.maxSpeed = whaleInitialSpeed;
+                slider.value = whale.maxSpeed;
+                individualSpeed.text = whale.maxSpeed.ToString();
+                break;
+            case 2:
+                babyWhale.maxSpeed = babyInitialSpeed;
+                slider.value = babyWhale.maxSpeed;
+                individualSpeed.text = babyWhale.maxSpeed.ToString();
+                break;
+            case 3:
+                for (int i = 0; i < fish.Length; i++)
+                {
+                    fish[i].maxSpeed = fishInitialSpeed;
+                }
+                slider.value = fish[0].maxSpeed;
+                individualSpeed.text = fish[0].maxSpeed.ToString();
+                break;
+            case 4:
+                anglerFish1.maxSpeed = angler1InitialSpeed;
+                slider.value = anglerFish1.maxSpeed;
+                individualSpeed.text = anglerFish1.maxSpeed.ToString();
+                break;
+            case 5:
+                anglerFish2.maxSpeed = angler2InitialSpeed;
+                slider.value = anglerFish2.maxSpeed;
+                individualSpeed.text = anglerFish2.maxSpeed.ToString();
                 break;
         }
     }
