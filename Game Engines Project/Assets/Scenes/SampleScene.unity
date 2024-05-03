@@ -3838,6 +3838,7 @@ GameObject:
   - component: {fileID: 218041219}
   - component: {fileID: 218041218}
   - component: {fileID: 218041221}
+  - component: {fileID: 218041222}
   m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
@@ -3903,7 +3904,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b51547474baf5de48a0c2b290f07bc1a, type: 2}
+  - {fileID: 2100000, guid: 224d1b225cb39c943ae11190c8d2f7f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3960,6 +3961,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &218041222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218041216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cf33058c2f31445a404d65ad5558d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mt: {fileID: 0}
+  colors: []
 --- !u!1001 &221231474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6915,6 +6930,7 @@ GameObject:
   - component: {fileID: 462617255}
   - component: {fileID: 462617256}
   - component: {fileID: 462617257}
+  - component: {fileID: 462617258}
   m_Layer: 0
   m_Name: Script dump
   m_TagString: Untagged
@@ -7116,6 +7132,20 @@ MonoBehaviour:
   seek: {fileID: 0}
   random: 0
   fish: {fileID: 0}
+--- !u!114 &462617258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462617246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cf33058c2f31445a404d65ad5558d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mt: {fileID: 0}
+  colors: []
 --- !u!1 &471976518
 GameObject:
   m_ObjectHideFlags: 0
@@ -9336,6 +9366,7 @@ GameObject:
   - component: {fileID: 641683356}
   - component: {fileID: 641683359}
   - component: {fileID: 641683358}
+  - component: {fileID: 641683360}
   m_Layer: 8
   m_Name: Fin
   m_TagString: Untagged
@@ -9378,7 +9409,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 224d1b225cb39c943ae11190c8d2f7f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9408,6 +9439,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641683355}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &641683360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641683355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cf33058c2f31445a404d65ad5558d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mt: {fileID: 0}
+  colors: []
 --- !u!1 &642804585
 GameObject:
   m_ObjectHideFlags: 0
@@ -12750,7 +12795,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 224d1b225cb39c943ae11190c8d2f7f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29179,6 +29224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924004615}
   - component: {fileID: 1924004616}
+  - component: {fileID: 1924004617}
   m_Layer: 8
   m_Name: Fin (Left)
   m_TagString: Untagged
@@ -29219,6 +29265,20 @@ MonoBehaviour:
   amplitudex: 50
   theta: 1
   left: 1
+--- !u!114 &1924004617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924004614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cf33058c2f31445a404d65ad5558d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mt: {fileID: 0}
+  colors: []
 --- !u!1 &1926821787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7049558675061265729, guid: b09f0e6baac69334da03414477183d5b, type: 3}
