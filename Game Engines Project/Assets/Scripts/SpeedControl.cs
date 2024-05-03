@@ -8,8 +8,8 @@ public class SpeedControl : MonoBehaviour
     public Text globalSpeed;
     public Text individualSpeed;
 
-
-    public Slider slider;
+    public Slider sliderTime;
+    public Slider sliderBoids;
 
     bool running = true;
     float previosTime = 1;
@@ -32,7 +32,7 @@ public class SpeedControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        slider.value = ducks[0].maxSpeed;
+        sliderBoids.value = ducks[0].maxSpeed;
         individualSpeed.text = ducks[0].maxSpeed.ToString();
         duckInitialSpeed = ducks[0].maxSpeed;
         whaleInitialSpeed = whale.maxSpeed;
@@ -40,6 +40,9 @@ public class SpeedControl : MonoBehaviour
         fishInitialSpeed = fish[0].maxSpeed;
         angler1InitialSpeed = anglerFish1.maxSpeed;
         angler2InitialSpeed = anglerFish2.maxSpeed;
+
+        globalSpeed.text = previosTime.ToString();
+        sliderTime.value = previosTime;
     }
 
     // Update is called once per frame
@@ -72,33 +75,42 @@ public class SpeedControl : MonoBehaviour
         globalSpeed.text = previosTime.ToString();
     }
 
+    public void ResetTime()
+    {
+        running = true;
+        Time.timeScale = 1;
+        previosTime = 1;
+        globalSpeed.text = previosTime.ToString();
+        sliderTime.value = 1;
+    }
+
     public void SelectBoid(int boid)
     {
         boidSelect = boid;
         switch (boidSelect)
         {
             case 0:
-                slider.value = ducks[0].maxSpeed;
+                sliderBoids.value = ducks[0].maxSpeed;
                 individualSpeed.text = ducks[0].maxSpeed.ToString();
                 break;
             case 1:
-                slider.value = whale.maxSpeed;
+                sliderBoids.value = whale.maxSpeed;
                 individualSpeed.text = whale.maxSpeed.ToString();
                 break;
             case 2:
-                slider.value = babyWhale.maxSpeed;
+                sliderBoids.value = babyWhale.maxSpeed;
                 individualSpeed.text = babyWhale.maxSpeed.ToString();
                 break;
             case 3:
-                slider.value = fish[0].maxSpeed;
+                sliderBoids.value = fish[0].maxSpeed;
                 individualSpeed.text = fish[0].maxSpeed.ToString();
                 break;
             case 4:
-                slider.value = anglerFish1.maxSpeed;
+                sliderBoids.value = anglerFish1.maxSpeed;
                 individualSpeed.text = anglerFish1.maxSpeed.ToString();
                 break;
             case 5:
-                slider.value = anglerFish2.maxSpeed;
+                sliderBoids.value = anglerFish2.maxSpeed;
                 individualSpeed.text = anglerFish2.maxSpeed.ToString();
                 break;
         }
@@ -145,17 +157,17 @@ public class SpeedControl : MonoBehaviour
                 {
                     ducks[i].maxSpeed = duckInitialSpeed;
                 }
-                slider.value = ducks[0].maxSpeed;
+                sliderBoids.value = ducks[0].maxSpeed;
                 individualSpeed.text = ducks[0].maxSpeed.ToString();
                 break;
             case 1:
                 whale.maxSpeed = whaleInitialSpeed;
-                slider.value = whale.maxSpeed;
+                sliderBoids.value = whale.maxSpeed;
                 individualSpeed.text = whale.maxSpeed.ToString();
                 break;
             case 2:
                 babyWhale.maxSpeed = babyInitialSpeed;
-                slider.value = babyWhale.maxSpeed;
+                sliderBoids.value = babyWhale.maxSpeed;
                 individualSpeed.text = babyWhale.maxSpeed.ToString();
                 break;
             case 3:
@@ -163,17 +175,17 @@ public class SpeedControl : MonoBehaviour
                 {
                     fish[i].maxSpeed = fishInitialSpeed;
                 }
-                slider.value = fish[0].maxSpeed;
+                sliderBoids.value = fish[0].maxSpeed;
                 individualSpeed.text = fish[0].maxSpeed.ToString();
                 break;
             case 4:
                 anglerFish1.maxSpeed = angler1InitialSpeed;
-                slider.value = anglerFish1.maxSpeed;
+                sliderBoids.value = anglerFish1.maxSpeed;
                 individualSpeed.text = anglerFish1.maxSpeed.ToString();
                 break;
             case 5:
                 anglerFish2.maxSpeed = angler2InitialSpeed;
-                slider.value = anglerFish2.maxSpeed;
+                sliderBoids.value = anglerFish2.maxSpeed;
                 individualSpeed.text = anglerFish2.maxSpeed.ToString();
                 break;
         }
@@ -200,27 +212,27 @@ public class SpeedControl : MonoBehaviour
         switch (boidSelect)
         {
             case 0:
-                slider.value = ducks[0].maxSpeed;
+                sliderBoids.value = ducks[0].maxSpeed;
                 individualSpeed.text = ducks[0].maxSpeed.ToString();
                 break;
             case 1:
-                slider.value = whale.maxSpeed;
+                sliderBoids.value = whale.maxSpeed;
                 individualSpeed.text = whale.maxSpeed.ToString();
                 break;
             case 2:
-                slider.value = babyWhale.maxSpeed;
+                sliderBoids.value = babyWhale.maxSpeed;
                 individualSpeed.text = babyWhale.maxSpeed.ToString();
                 break;
             case 3:
-                slider.value = fish[0].maxSpeed;
+                sliderBoids.value = fish[0].maxSpeed;
                 individualSpeed.text = fish[0].maxSpeed.ToString();
                 break;
             case 4:
-                slider.value = anglerFish1.maxSpeed;
+                sliderBoids.value = anglerFish1.maxSpeed;
                 individualSpeed.text = anglerFish1.maxSpeed.ToString();
                 break;
             case 5:
-                slider.value = anglerFish2.maxSpeed;
+                sliderBoids.value = anglerFish2.maxSpeed;
                 individualSpeed.text = anglerFish2.maxSpeed.ToString();
                 break;
         }
