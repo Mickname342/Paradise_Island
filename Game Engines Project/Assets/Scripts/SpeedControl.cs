@@ -179,5 +179,51 @@ public class SpeedControl : MonoBehaviour
         }
     }
 
+    public void ResetAllBoidSpeed()
+    {
+        for (int i = 0; i < ducks.Length; i++)
+        {
+            ducks[i].maxSpeed = duckInitialSpeed;
+        }
+        
+        whale.maxSpeed = whaleInitialSpeed;
+        babyWhale.maxSpeed = babyInitialSpeed;
+        
+        for (int i = 0; i < fish.Length; i++)
+        {
+            fish[i].maxSpeed = fishInitialSpeed;
+        }
+        
+        anglerFish1.maxSpeed = angler1InitialSpeed;
+        anglerFish2.maxSpeed = angler2InitialSpeed;
+        
+        switch (boidSelect)
+        {
+            case 0:
+                slider.value = ducks[0].maxSpeed;
+                individualSpeed.text = ducks[0].maxSpeed.ToString();
+                break;
+            case 1:
+                slider.value = whale.maxSpeed;
+                individualSpeed.text = whale.maxSpeed.ToString();
+                break;
+            case 2:
+                slider.value = babyWhale.maxSpeed;
+                individualSpeed.text = babyWhale.maxSpeed.ToString();
+                break;
+            case 3:
+                slider.value = fish[0].maxSpeed;
+                individualSpeed.text = fish[0].maxSpeed.ToString();
+                break;
+            case 4:
+                slider.value = anglerFish1.maxSpeed;
+                individualSpeed.text = anglerFish1.maxSpeed.ToString();
+                break;
+            case 5:
+                slider.value = anglerFish2.maxSpeed;
+                individualSpeed.text = anglerFish2.maxSpeed.ToString();
+                break;
+        }
+    }
 
 }
