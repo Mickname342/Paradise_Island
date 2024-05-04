@@ -33248,7 +33248,7 @@ PrefabInstance:
     - target: {fileID: 1844375252955871385, guid: b09f0e6baac69334da03414477183d5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 90b50a0fc76c8cc40b539f8a5010032f, type: 2}
+      objectReference: {fileID: 2100000, guid: b1e32a5258b5601459388ff2da2f2444, type: 2}
     - target: {fileID: 3709910144309322691, guid: b09f0e6baac69334da03414477183d5b, type: 3}
       propertyPath: anemonae.Array.size
       value: 2
