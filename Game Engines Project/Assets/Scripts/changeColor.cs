@@ -40,7 +40,7 @@ public class changeColor : MonoBehaviour
             for (float interpolant = 0f; interpolant < 1f; interpolant += 0.03f)
             {
                 mt.color = Color.Lerp(colors[startColor], colors[endColor], interpolant);
-                yield return null;
+                yield return new WaitForFixedUpdate();
             }
             startColor = endColor;
             endColor++;
