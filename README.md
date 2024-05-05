@@ -131,5 +131,5 @@ Skybox: taken from the unity package “Fantasy skybox FREE”.
 
 Mountain: taken from the unity asset package “Polygon Farm”.
 
-Rainbow gradient image: taken from Wikimedia: [Link](https://commons.wikimedia.org/wiki/File:Rainbow-gradient-fully-saturated.svg) but I rotated it 90 degrees.
+Rainbow gradient image: taken from Wikimedia, but I rotated it 90 degrees: [Link](https://commons.wikimedia.org/wiki/File:Rainbow-gradient-fully-saturated.svg)
 
