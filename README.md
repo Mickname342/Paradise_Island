@@ -7,7 +7,10 @@
 
 ## Ducks
 To study the ducks, I went to phoenix park and I took a couple of pictures and some videos.
+
 ![Duck1](https://github.com/Mickname342/Game_Engines_Project/blob/main/Images/20240428_161914.jpg)
+![Duck2](https://github.com/Mickname342/Game_Engines_Project/blob/main/Images/20240428_162310.jpg)
+
 (the videos can be found in the folder called Duck Videos)
 After studying them for a while I found that they had 5 different behaviours:
 -	Stay: This state is when the ducks are on land and they sit and stay still. This behaviour is exclusive to when they are on land because they would not stay still while on water.
@@ -16,6 +19,8 @@ After studying them for a while I found that they had 5 different behaviours:
 -	Go to land: This behaviour is for when the duck is on water and goes in the direction of land with the intention of getting out of the water.
 -	Wander Land: This state is for when the duck is on land and t walks in a random direction.
 They seemed to switch between these states at random while they were either on land or water, So I ended up making this flow-chart:
+
+![FlowChart](https://github.com/Mickname342/Game_Engines_Project/blob/main/Images/20240504_233220.jpg)
  
 To simulate the duck in unity I used 2 behaviours: Seek and Wander Noise. They were implemented in the following ways:
 -	Stay: The seek behaviour and noise wander behaviours weight is 0 and the target object for seek is set to null
