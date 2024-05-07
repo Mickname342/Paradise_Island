@@ -1,4 +1,5 @@
 # Game_Engines_Project
+The Unity project folder is called Game Engines Project
 
 ## YouTube video:
 [Link to the video](https://www.youtube.com/watch?v=Es6QX_h6WTI)
@@ -129,7 +130,7 @@ Music: it was created by JuliusH on Pixaby with the title Deep Water Adventure -
 
 Skybox: taken from the unity package “Fantasy skybox FREE”.
 
-Mountain: taken from the unity asset package “Polygon Farm”.
+Mountain and rocks (same asset): taken from the unity asset package “Polygon Farm”.
 
 Rainbow gradient image: taken from Wikimedia, but I rotated it 90 degrees: [Link](https://commons.wikimedia.org/wiki/File:Rainbow-gradient-fully-saturated.svg)
 
