@@ -1,5 +1,5 @@
 # Game_Engines_Project
-The Unity project folder is called Game Engines Project
+The Unity project folder is called "Game Engines Project".
 
 ## YouTube video:
 [Link to the video](https://www.youtube.com/watch?v=Es6QX_h6WTI)
