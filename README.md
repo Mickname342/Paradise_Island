@@ -1,5 +1,8 @@
 # Paradise Island
-Paradise ISland is a simulation of different animals in their anatural habitat. This simulation is created using boid behaviours and state machines.
+
+![Title_Screen](https://github.com/Mickname342/Paradise_Island/blob/main/Images/Title_Screen.PNG)
+
+Paradise Island is a simulation of different animals in their anatural habitat. This simulation is created using boid behaviours and state machines.
 
 The Unity project folder is called "Game Engines Project".
 
@@ -12,8 +15,7 @@ If you prefere there is pdf file with the exact same text for you to read. If yo
 ## Ducks
 To study the ducks, I went to phoenix park and I took a couple of pictures and some videos.
 
-![Duck1](https://github.com/Mickname342/Game_Engines_Project/blob/main/Images/20240428_161914.jpg)
-![Duck2](https://github.com/Mickname342/Game_Engines_Project/blob/main/Images/20240428_162310.jpg)
+![Duck1](https://github.com/Mickname342/Paradise_Island/blob/main/Images/Duck_Boid.PNG)
 
 (the videos can be found in the folder called Duck Videos)
 
@@ -40,6 +42,9 @@ With these behaviours and the flowchart I was able to implement the behaviour of
 The duck ended up being the most complex boid in the simulation.
 
 ## Whale:
+
+![Whale_Image](https://github.com/Mickname342/Paradise_Island/blob/main/Images/Whale_Boid.PNG)
+
 The whale was the second boid I implemented.
 The first thing I did for the whale was code the tail and fin movement. The whale, unlike other aquatic animals, moves its tail up and down because it is a mammal and their bones naturally blend up and down. Information taken from the whale and dolphin conservation centre:
 
@@ -65,6 +70,9 @@ The follow path has a 40% chance to transition to the wander behaviour every 3 s
 Comparing it to the real movement it is not as random because it follows a path, but it was necessary to make the simulation more concentrated. It was also impossible to replicate the long distance travel of whales for the same reason.
 
 ## Baby Whale:
+
+![Baby_Whale](https://github.com/Mickname342/Paradise_Island/blob/main/Images/Baby_Whale_Boid.PNG)
+
 The baby whale, as its name implies, is a boid that represents the offspring of the bigger whale. While they may share the same model with the only difference being its scale, their behaviours are very different.
 
 Baby whales, [as seen in this video](https://www.youtube.com/watch?v=pJqlkuVKO2k), stay near their mother at all times and tend to wander a bit but not too far away from their mother.
@@ -83,6 +91,8 @@ This state machine was created for 2 reasons. The first one is to better control
 Comparing it to real life it is for the most part the same, the only thing I wasn’t able to replicate is the baby whale touching the big whale due to it clipping into the model and preferring bug prevention over behaviour fidelity.
 
 ## Fish:
+
+![Fish_Boid](https://github.com/Mickname342/Paradise_Island/blob/main/Images/Fish_Boid.PNG)
 
 The fish boid is primarily based on the clownfish due to their connection to anemone. In this project anemone are look more like algae to improve the performance of the game.
 
@@ -107,6 +117,8 @@ The way it transitions to this state is by entering a trigger that the anglerfis
 Comparing it to real life it has 2 major differences, the first one is that it cannot stay still inside the anemone nor clean it, which is what clownfish does most of the time, and the second one is that it will never interact with anglerfish in real life so we don’t know if it would go to the light produced by it.
 
 ## Anglerfish:
+
+![Angler_Boid](https://github.com/Mickname342/Paradise_Island/blob/main/Images/Angler_Fish_Boid.PNG)
 
 There is very little documented evidence about anglerfish, but it is known that they don’t swim very fast and don’t actively hunt, they just wait until a prey comes nearby.
 
