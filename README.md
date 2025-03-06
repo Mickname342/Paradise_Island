@@ -1,4 +1,6 @@
-# Game_Engines_Project
+# Paradise Island
+Paradise ISland is a simulation of different animals in their anatural habitat. This simulation is created using boid behaviours and state machines.
+
 The Unity project folder is called "Game Engines Project".
 
 ## YouTube video:
